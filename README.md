@@ -1,6 +1,6 @@
 # Formal Verification of Generalized Bulletproofs
 
-Code artifacts, definitions and proofs for GBP/Bulletproofs built upon VCVio.
+Code artifacts, definitions and proofs for GBP/Bulletproofs built upon VCV-io.
 
 ## Definitions
 
@@ -19,12 +19,16 @@ the statement is the verifiers state and the proof is the last round message.
 Additionally, this repository contains compositions theorems stating e.g.
 
 *Soundness:*
-> If protocol A is (kA1,...,kAn)-special sound and protocol B is (kB1,...,kBn)-special sound,
+> If protocol $\Pi_A$ is $(k_A^{(1)},...,k_A^{(n)})$-special sound and protocol $\Pi_B$ is $(k_B^{(1)},...,k_B^{(n)})$-special sound.
 > 
-> then B ○ A (A followed by B) is (kA1,...,kAn, kB1, ..., kBn)-special sound
+> Then $\Pi_B \circ \Pi_A$ (A followed by B) is $(k_A^{(1)},...,k_A^{(n)}, k_B^{(1)}, ..., k_B^{(n)})$-special sound
 
 *Zero-Knowledge:*
-> If protocol A is HVZK, then B ○ A is HVZK.
+> If protocol $\Pi_A$ is HVZK.
+>
+> Then $\Pi_B \circ \Pi_A$ is HVZK for any $\Pi_B$
+
+These enable "composing" a tower of reductions, which is how folding is expressed in this project.
 
 ## Proofs
 
@@ -48,4 +52,6 @@ Finally, this repository contains proofs of:
 
 ## Final Notes
 
-This is part of a bigger project, a teaser, more exciting news to come...
+This is part of a bigger project (hence the lack of git history), a teaser.
+
+More exciting news to come...

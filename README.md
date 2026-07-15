@@ -1,6 +1,6 @@
 # Formal Verification of Generalized Bulletproofs
 
-Code artifacts, definitions and proofs for GBP/Bulletproofs built upon VCV-io.
+Code artifacts, definitions and proofs for GBP/Bulletproofs built upon VCVio.
 
 ## Definitions
 
@@ -43,10 +43,10 @@ Finally, this repository contains proofs of:
   - Completeness
   - Perfect HVZK
 - Bulletproof folding:
-  - 8 (Computional) Special Soundness
+  - (Computional) 8-special soundness
   - Completeness
 - Simplified Bulletproof folding:
-  - 4 (Computional) Special Soundness
+  - (Computional) 4-special soundness
   - Completeness
 
 

@@ -1,6 +1,6 @@
 # Formal Verification of Generalized Bulletproofs
 
-Code artifacts, definitions and proofs for GBP/Bulletproofs.
+Code artifacts, definitions and proofs for GBP/Bulletproofs built upon VCVio.
 
 ## Definitions
 
@@ -18,21 +18,33 @@ the statement is the verifiers state and the proof is the last round message.
 
 Additionally, this repository contains compositions theorems stating e.g.
 
-> Soundness:
+*Soundness:*
 > If protocol A is (kA1,...,kAn)-special sound and protocol B is (kB1,...,kBn)-special sound,
+> 
 > then B ○ A (A followed by B) is (kA1,...,kAn, kB1, ..., kBn)-special sound
 
-> ZK
+*Zero-Knowledge:*
 > If protocol A is HVZK, then B ○ A is HVZK.
 
 ## Proofs
 
-Additionally, this repository contains proofs of:
+Finally, this repository contains proofs of:
 
-- (k1,...,kn) (Computional) Special Soundness for Generalized Bulletproofs (Arithmetization)
-- (k1,...,kn) (Computional) Special Soundness for Improved Generalized Bulletproofs (Arithmetization)
-- 8 (Computional) Special Soundness for original Bulletproof folding
-- 4 (Computional) Special Soundness for simplified Bulletproof folding
+- Generalized Bulletproofs (Arithmetization):
+  - (Computional) $(n, q+1, 2 · n' · c + 3)$-special soundness
+  - Completeness
+  - Perfect HVZK
+- Improved Generalized Bulletproofs (Arithmetization):
+  - (Computional) $(n, q+1, 2 · c+5, 2)$-special soundness (observe this protocol has an additional round).
+  - Completeness
+  - Perfect HVZK
+- Bulletproof folding:
+  - 8 (Computional) Special Soundness
+  - Completeness
+- Simplified Bulletproof folding:
+  - 4 (Computional) Special Soundness
+  - Completeness
+
 
 ## Final Notes
 
